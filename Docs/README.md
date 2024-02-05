@@ -1,6 +1,6 @@
 # Did You Hear About This Job
 
-[WebUI Version: 0.7.24](https://github.com/StoicDreams/RustWebUI)
+[WebUI Version: 0.7.28](https://github.com/StoicDreams/RustWebUI)
 
 Job search tools.
 
