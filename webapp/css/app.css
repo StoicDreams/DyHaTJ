@@ -25,3 +25,9 @@
 	--color-button: var(--color-info);
 	--color-button-offset: var(--color-info-offset);
 }
+
+svg.logo text {
+    fill: white;
+    font-size: 3.0em;
+    font-weight: 600;
+}
