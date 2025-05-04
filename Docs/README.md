@@ -1,8 +1,8 @@
 # Did You Hear About This Job
 
-[Version: 0.1.2](https://github.com/StoicDreams/DyHaTJ)
+[Version: 0.1.4](https://github.com/StoicDreams/DyHaTJ)
 
-[WebUI Version: 0.10.11](https://github.com/StoicDreams/WebUI)
+[WebUI Version: 0.11.2](https://github.com/StoicDreams/WebUI)
 
 Job search tools.
 
