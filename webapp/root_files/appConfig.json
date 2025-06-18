@@ -2,5 +2,6 @@
     "appName": "Did You Hear About This Job?",
     "appCompanyPossessive": "Stoic Dreams'",
     "appCompanySingular": "Stoic Dreams",
-    "appApi": "https://api.myfi.ws"
+    "appApi": "https://api.myfi.ws",
+    "rolesApi": "user/roles"
 }
