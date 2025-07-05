@@ -1,3 +1,3 @@
-<webui-data data-page-title="{APP_NAME}" data-page-subtitle=""></webui-data>
+<webui-data data-page-title="Job Search" data-page-subtitle=""></webui-data>
 
-<webui-under-construction></webui-under-construction>
+<app-search></app-search>
