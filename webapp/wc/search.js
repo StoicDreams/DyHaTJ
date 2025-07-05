@@ -4,9 +4,9 @@
 <webui-page-segment elevation="10" style="max-width:800px" class="mx-a">
 <form id="searchform">
 <webui-flex align="center" justify="center" class="px-3">
-<webui-input-text label="Job Title" compact placeholder="restaurant specialist" data-subscribe="session-search-job:value" data-trigger="session-search-job"></webui-input-text>
+<webui-input-text name="job" label="Job Title" compact placeholder="restaurant specialist" data-subscribe="session-search-job:value" data-trigger="session-search-job"></webui-input-text>
 <webui-flex align="center" justify="center" class="pt-3 px-3">in</webui-flex>
-<webui-input-text label="Location" compact placeholder="New York" data-subscribe="session-search-loc:value" data-trigger="session-search-loc"></webui-input-text>
+<webui-input-text name="loc" label="Location" compact placeholder="New York" data-subscribe="session-search-loc:value" data-trigger="session-search-loc"></webui-input-text>
 </webui-flex>
 <webui-flex justify="end" align="center" class="pt-3">
 <webui-alert severity="danger"></webui-alert>
@@ -72,8 +72,10 @@
             form.addEventListener('submit', ev => {
                 ev.stopPropagation();
                 ev.preventDefault();
-                let job = convertForUrl(webui.getData('session-search-job'));
-                let loc = convertForUrl(webui.getData('session-search-loc'));
+                const formData = new FormData(form);
+                const jsonData = Object.fromEntries(formData);
+                let job = convertForUrl(jsonData.job);
+                let loc = convertForUrl(jsonData.loc);
                 if (!job) {
                     alert.setValue(`Please enter what job you are looking for`);
                     return;
