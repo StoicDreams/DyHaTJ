@@ -45,4 +45,4 @@ Join our community of empowered job seekers and let us help you unlock your full
 
 </webui-page-segment>
 
-<webui-content cache src="https://cdn.myfi.ws/d/en-US/about-stoic-dreams.md"></webui-content>
+<webui-content cache src="https://cdn.myfi.ws/d/about-stoic-dreams.md"></webui-content>
