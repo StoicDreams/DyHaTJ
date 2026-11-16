@@ -48,9 +48,3 @@ test.describe('app-search', () => {
         expect(await page.evaluate(() => webui.loadSearchFromUrl())).toEqual({ job: '', loc: '' });
     });
 });
-
-test('app-search-results says results are coming soon', async ({ page }) => {
-    await openPage(page, '/search/Chef');
-    await expect(page.locator('app-search-results webui-alert')).toContainText('Coming Soon!');
-    await expect(page.locator('webui-page-not-found')).toHaveCount(0);
-});

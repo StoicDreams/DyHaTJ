@@ -3,7 +3,7 @@
     const content = `
 <webui-page-segment elevation="10" style="max-width:800px" class="mx-a">
 <form id="searchform">
-<webui-flex align="center" justify="center" class="px-3">
+<webui-flex align="center" justify="center" class="px-3" wrap-at="560">
 <webui-input-text name="job" label="Job Title" compact placeholder="restaurant specialist" data-subscribe="session-search-job:value" data-trigger="session-search-job"></webui-input-text>
 <webui-flex align="center" justify="center" class="pt-3 px-3">in</webui-flex>
 <webui-input-text name="loc" label="Location" compact placeholder="New York" data-subscribe="session-search-loc:value" data-trigger="session-search-loc"></webui-input-text>
@@ -38,7 +38,7 @@
         content: true,
         watchVisibility: false,
         isInput: false,
-        preload: '',
+        preload: 'app:store',
         flags: [],
         attr: ['height', 'max-height'],
         attrChanged(property, value) {
@@ -78,11 +78,9 @@
                     alert.setValue(`Please enter what job you are looking for`);
                     return;
                 }
-                if (loc) {
-                    webui.navigateTo(`/search/${job}/${loc}`);
-                } else {
-                    webui.navigateTo(`/search/${job}`);
-                }
+                // dyhatj.go also tells the results to refresh when this is a new search from the search page.
+                const go = window.dyhatj ? window.dyhatj.go : href => webui.navigateTo(href);
+                go(loc ? `/search/${job}/${loc}` : `/search/${job}`);
             });
         },
     });

@@ -1,4 +1,4 @@
-<webui-data data-page-title="Job Search" data-page-subtitle=""></webui-data>
+<webui-data data-page-title="Find Jobs" data-page-subtitle=""></webui-data>
 
 <app-search></app-search>
 
@@ -8,6 +8,6 @@
 
 <webui-page-segment elevation="10">
 
-Thank you for visiting our website. Our job search features are currently in development.
+Job search is a preview. Listings come from sample data until a real job feed is connected, so don't apply to them. Jobs shared by the community show here too when they match.
 
 </webui-page-segment>

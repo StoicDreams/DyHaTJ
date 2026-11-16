@@ -3,5 +3,58 @@
         "name": "Home",
         "icon": "circle_home|theme:title|backing|inverted",
         "url": "/"
+    },
+    {
+        "name": "Find Jobs",
+        "icon": "magnifying-glass",
+        "url": "/search"
+    },
+    {
+        "name": "Shared Jobs",
+        "icon": "briefcase",
+        "url": "/jobs"
+    },
+    {
+        "name": "Tips",
+        "icon": "lightbulb",
+        "url": "/tips"
+    },
+    {
+        "name": "Share",
+        "icon": "share",
+        "url": "/share"
+    },
+    {
+        "name": "Application Tracker",
+        "icon": "clipboard-list",
+        "url": "/tracker",
+        "role": 1
+    },
+    {
+        "name": "Resume Keywords",
+        "icon": "file|bordered",
+        "url": "/tools/resume-keywords"
+    },
+    {
+        "name": "For Employers",
+        "icon": "building",
+        "url": "/employers"
+    },
+    {
+        "name": "Community Guidelines",
+        "icon": "scale-balanced",
+        "url": "/guidelines"
+    },
+    {
+        "name": "My Profile",
+        "icon": "user",
+        "url": "/profile",
+        "role": 1
+    },
+    {
+        "name": "Moderation",
+        "icon": "shield",
+        "url": "/moderation",
+        "role": 16
     }
 ]

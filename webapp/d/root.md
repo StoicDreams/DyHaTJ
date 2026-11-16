@@ -4,13 +4,39 @@
 
 Greetings, and welcome to this early build of {APP_NAME}: This website is currently in early development. We are currently preparing and adding content as well as developing features and services for you to start using soon.
 
-Because of this, we may reference content or features that aren't currently on the website or ready to use. For instance, the articles, tutorials, and features detailed below are not actually published yet.
+Job search, shared jobs, tips, comments, the application tracker, and sponsored listings are working previews. The jobs, tips, and people you see in them are sample data, and anything you add is saved only in this browser. The articles, tutorials, and training described below are not published yet.
 
 Likewise, we may detail unreleased content that we later decide not to implement, in which case any details of that content will be removed from the website.
 
 </webui-quote>
 
 <app-search></app-search>
+
+## Did You Hear About This Job?
+
+<webui-page-segment elevation="10">
+
+The best leads often come from someone who says "did you hear about this job?" Share the jobs you hear about, pass along what worked in your own search, and keep track of your applications.
+
+<webui-flex justify="center" gap="2" wrap>
+<webui-button theme="primary" start-icon="share" href="/share">Share a job or tip</webui-button>
+<webui-button theme="secondary" start-icon="bookmark" href="/tracker">Track applications</webui-button>
+<webui-button theme="tertiary" start-icon="magnifying-glass" href="/tools/resume-keywords">Check resume keywords</webui-button>
+</webui-flex>
+
+</webui-page-segment>
+
+### Recently Shared Jobs
+
+<app-post-list kind="job" limit="3"></app-post-list>
+
+<webui-flex justify="end"><webui-link href="/jobs" end-icon="arrow">All shared jobs</webui-link></webui-flex>
+
+### Most Helpful Tips
+
+<app-post-list kind="tip" limit="3" sort="top"></app-post-list>
+
+<webui-flex justify="end"><webui-link href="/tips" end-icon="arrow">All tips</webui-link></webui-flex>
 
 ## Welcome to Your Job Search Journey
 
