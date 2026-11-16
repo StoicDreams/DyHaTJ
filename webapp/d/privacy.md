@@ -47,19 +47,11 @@ When these features move from preview to our servers, this is how your informati
 
 </webui-page-segment>
 
-## Children
+## Age Requirement
 
 <webui-page-segment elevation="10">
 
 {APP_NAME} is for people 16 and older, and isn't directed to children under 13. You must confirm you're at least 16 to create a profile. If we learn that we have personal information from a child under 13, we delete it.
-
-</webui-page-segment>
-
-## Do Not Track
-
-<webui-page-segment elevation="10">
-
-Browsers' Do Not Track signals don't currently change how this site works.
 
 </webui-page-segment>
 

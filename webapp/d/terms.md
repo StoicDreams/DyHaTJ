@@ -2,7 +2,7 @@
 
 <webui-quote theme="info">
 
-Sections 11 to 22 are specific to {APP_NAME} and were last updated November 15, 2026. Where they differ from the general terms above, these sections apply to {APP_NAME}.
+Sections 11 to 20 are specific to {APP_NAME} and were last updated November 15, 2026. Where they differ from the general terms above, these sections apply to {APP_NAME}.
 
 </webui-quote>
 
@@ -18,9 +18,7 @@ Anyone can read {APP_NAME}. To share, comment, vote, report, use the application
 
 <webui-page-segment elevation="10">
 
-You keep ownership of the jobs, tips, comments, and listings you share. By sharing them, you give {COMPANY_SINGULAR} a worldwide, non-exclusive, royalty-free license to host, store, display, reproduce, adapt for display, and distribute them on {APP_NAME} and in connection with running and promoting it. This license ends when you delete the content, except for copies kept for a limited time in backups or where the law requires us to keep them.
-
-You promise that you have the right to share what you post, that it's accurate to the best of your knowledge, and that it follows the [Community Guidelines](/guidelines). The license in section 3 covers our materials, not what other members share. Other members' posts belong to them.
+Section 10 covers the jobs, tips, comments, and listings you share: you keep ownership, you give {COMPANY_SINGULAR} a license to show them on {APP_NAME}, and how to send a copyright complaint. You also promise that what you share is accurate to the best of your knowledge and follows the [Community Guidelines](/guidelines).
 
 </webui-page-segment>
 
@@ -76,23 +74,7 @@ Jobs and posts link to other sites, which have their own terms and privacy polic
 
 </webui-page-segment>
 
-## 19. Copyright Complaints
-
-<webui-page-segment elevation="10">
-
-If you believe something on {APP_NAME} infringes your copyright, email [support@stoicdreams.com](mailto:support@stoicdreams.com) with: your contact details, the work you believe is infringed, the address of the content on {APP_NAME}, a statement that you have a good faith belief the use isn't authorized, a statement under penalty of perjury that your notice is accurate and that you're the owner or authorized to act for the owner, and your physical or electronic signature. We remove content when the law requires it, and we close the accounts of repeat infringers.
-
-</webui-page-segment>
-
-## 20. Your Responsibility
-
-<webui-page-segment elevation="10">
-
-You agree to cover {COMPANY_SINGULAR}'s reasonable costs, including legal fees, from claims by others that arise from what you share on {APP_NAME} or from your breaking these terms, to the extent the law allows.
-
-</webui-page-segment>
-
-## 21. Preview Features
+## 19. Preview Features
 
 <webui-page-segment elevation="10">
 
@@ -100,7 +82,7 @@ Some features of {APP_NAME} are previews. While they are, what you add is stored
 
 </webui-page-segment>
 
-## 22. Refund Policy
+## 20. Refund Policy
 
 <webui-page-segment elevation="10">
 
