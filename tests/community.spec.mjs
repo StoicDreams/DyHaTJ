@@ -20,32 +20,34 @@ async function member(page, route, roles = 1) {
 test.describe('app-store', () => {
     test('guests can read but not write', async ({ page }) => {
         await openPage(page, '/jobs');
+        await page.waitForFunction(() => !!window.dyhatj);
         const posts = await api(page, 'POST', 'posts/query', { kind: 'job' });
         expect(posts.length).toBeGreaterThan(0);
         expect(posts.every(p => p.sample)).toBe(true);
-        expect(await apiError(page, 'POST', 'posts', { kind: 'tip' })).toMatchObject({ status: 401 });
+        await expect(apiError(page, 'POST', 'posts', { kind: 'tip' })).resolves.toMatchObject({ status: 401 });
     });
 
     test('a profile needs the age and guidelines checks', async ({ page }) => {
         await signIn(page, 1);
         await openPage(page, '/share');
         await expectSignedIn(page, 1);
-        expect(await apiError(page, 'POST', 'posts', { kind: 'tip' })).toMatchObject({ status: 428 });
-        expect(await apiError(page, 'POST', 'me', { displayName: 'A', acceptGuidelines: true })).toMatchObject({ status: 400 });
-        expect(await apiError(page, 'POST', 'me', { displayName: 'A', confirmAge: true })).toMatchObject({ status: 400 });
+        await page.waitForFunction(() => !!window.dyhatj);
+        await expect(apiError(page, 'POST', 'posts', { kind: 'tip' })).resolves.toMatchObject({ status: 428 });
+        await expect(apiError(page, 'POST', 'me', { displayName: 'A', acceptGuidelines: true })).resolves.toMatchObject({ status: 400 });
+        await expect(apiError(page, 'POST', 'me', { displayName: 'A', confirmAge: true })).resolves.toMatchObject({ status: 400 });
         const profile = await api(page, 'POST', 'me', { displayName: 'A', confirmAge: true, acceptGuidelines: true });
         expect(profile.acceptedGuidelinesAt).toBeTruthy();
     });
 
     test('posts are validated, rate limited, and links must be web addresses', async ({ page }) => {
         await member(page, '/share');
-        expect(await apiError(page, 'POST', 'posts', { kind: 'job', title: 'Cook', company: 'X', location: 'Y', workplace: 'onsite', type: 'full-time', note: 'n', url: 'javascript:alert(1)' }))
+        await expect(apiError(page, 'POST', 'posts', { kind: 'job', title: 'Cook', company: 'X', location: 'Y', workplace: 'onsite', type: 'full-time', note: 'n', url: 'javascript:alert(1)' })).resolves
             .toMatchObject({ status: 400 });
         const job = { kind: 'job', title: 'Cook', company: 'X', location: 'Y', workplace: 'onsite', type: 'full-time', note: 'n', url: 'https://example.com/job' };
         await api(page, 'POST', 'posts', job);
-        expect(await apiError(page, 'POST', 'posts', job)).toMatchObject({ status: 409 });
+        await expect(apiError(page, 'POST', 'posts', job)).resolves.toMatchObject({ status: 409 });
         for (let i = 1; i < 10; i++) await api(page, 'POST', 'posts', { kind: 'tip', category: 'interviews', title: `Tip ${i}`, body: 'Body' });
-        expect(await apiError(page, 'POST', 'posts', { kind: 'tip', category: 'interviews', title: 'One more', body: 'Body' })).toMatchObject({ status: 429 });
+        await expect(apiError(page, 'POST', 'posts', { kind: 'tip', category: 'interviews', title: 'One more', body: 'Body' })).resolves.toMatchObject({ status: 429 });
     });
 
     test('three reports hide a post until a moderator keeps it', async ({ page }) => {
@@ -61,8 +63,8 @@ test.describe('app-store', () => {
             }, id);
             await api(page, 'POST', 'reports', { targetType: 'post', targetId: 'p-2', reason: 'scam' });
         }
-        expect(await apiError(page, 'GET', 'posts/p-2')).toMatchObject({ status: 404 });
-        expect(await apiError(page, 'GET', 'moderation/queue')).toMatchObject({ status: 403 });
+        await expect(apiError(page, 'GET', 'posts/p-2')).resolves.toMatchObject({ status: 404 });
+        await expect(apiError(page, 'GET', 'moderation/queue')).resolves.toMatchObject({ status: 403 });
         await page.evaluate(() => webui.setData('session-user-role', 17));
         const queue = await api(page, 'GET', 'moderation/queue');
         expect(queue[0]).toMatchObject({ targetId: 'p-2' });
@@ -70,7 +72,7 @@ test.describe('app-store', () => {
         expect(queue[0].reports.some(r => 'reporterId' in r)).toBe(false);
         await api(page, 'POST', 'moderation/post/p-2', { action: 'keep' });
         expect((await api(page, 'GET', 'posts/p-2')).status).toBe('visible');
-        expect(await api(page, 'GET', 'moderation/queue')).toEqual([]);
+        await expect(api(page, 'GET', 'moderation/queue')).resolves.toEqual([]);
     });
 
     test('deleting my data removes everything I added', async ({ page }) => {
@@ -84,7 +86,7 @@ test.describe('app-store', () => {
         expect(data.tracker).toHaveLength(1);
         await api(page, 'DELETE', 'me');
         expect((await api(page, 'GET', 'me')).profile).toBeNull();
-        expect(await apiError(page, 'GET', `posts/${post.id}`)).toMatchObject({ status: 404 });
+        await expect(apiError(page, 'GET', `posts/${post.id}`)).resolves.toMatchObject({ status: 404 });
         expect((await api(page, 'GET', 'posts/p-11')).score).toBe(18);
     });
 });
@@ -285,7 +287,7 @@ test.describe('app-moderation and app-profile', () => {
         await expect(entry).toContainText('Spam or advertising');
         await entry.locator('webui-button', { hasText: 'Hide' }).click();
         await expect(page.locator('app-moderation [data-id="p-3"]')).toContainText('hidden');
-        expect(await api(page, 'POST', 'posts/query', { kind: 'job' }).then(list => list.some(p => p.id === 'p-3'))).toBe(false);
+        await expect.poll(() => api(page, 'POST', 'posts/query', { kind: 'job' }).then(list => list.some(p => p.id === 'p-3'))).toBe(false);
     });
 
     test('the profile shows my posts, and on localhost the preview tools add the moderator role', async ({ page }) => {

@@ -40,11 +40,11 @@ test.describe('app-search', () => {
         await openPage(page, '/search/Restaurant_Specialist/New_York');
         await expect(field(page, 'job')).toHaveValue('Restaurant Specialist');
         await expect(field(page, 'loc')).toHaveValue('New York');
-        expect(await page.evaluate(() => webui.loadSearchFromUrl())).toEqual({ job: 'Restaurant Specialist', loc: 'New York' });
+        await expect.poll(() => page.evaluate(() => webui.loadSearchFromUrl())).toEqual({ job: 'Restaurant Specialist', loc: 'New York' });
     });
 
     test('other pages are not read as a search', async ({ page }) => {
         await openPage(page, '/');
-        expect(await page.evaluate(() => webui.loadSearchFromUrl())).toEqual({ job: '', loc: '' });
+        await expect.poll(() => page.evaluate(() => webui.loadSearchFromUrl())).toEqual({ job: '', loc: '' });
     });
 });
