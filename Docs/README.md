@@ -1,6 +1,6 @@
 # Did You Hear About This Job
 
-[Version: 0.1.27](https://github.com/StoicDreams/DyHaTJ)
+[Version: 0.1.28](https://github.com/StoicDreams/DyHaTJ)
 
 [WebUI](https://github.com/StoicDreams/WebUI)
 
