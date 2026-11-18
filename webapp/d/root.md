@@ -1,4 +1,4 @@
-<webui-data data-page-title="{APP_NAME}?" data-page-subtitle="Your Ultimate Partner in Career Success"></webui-data>
+<webui-data data-page-title="{APP_NAME}?" data-page-subtitle="Your Ultimate Partner in Career Success" data-page-description="Search jobs, share ones you heard about, read tips from other job seekers, and track your applications. An early build with sample data."></webui-data>
 
 <webui-quote theme="warning">
 

@@ -1,4 +1,4 @@
-<webui-data data-page-title="Job Search Tips" data-page-subtitle="What worked for people like you"></webui-data>
+<webui-data data-page-title="Job Search Tips" data-page-subtitle="What worked for people like you" data-page-description="Read job search advice from job seekers and hiring managers, mark the tips that helped you, and share what worked in your own search."></webui-data>
 
 <webui-page-segment elevation="10">
 

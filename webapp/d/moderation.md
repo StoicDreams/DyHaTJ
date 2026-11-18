@@ -1,4 +1,4 @@
-<webui-data data-page-title="Moderation" data-page-subtitle="Reports and hidden posts"></webui-data>
+<webui-data data-page-title="Moderation" data-page-subtitle="Reports and hidden posts" data-page-description="Review reported posts and decide whether to keep, hide, or remove each one, following the Community Guidelines."></webui-data>
 
 <webui-page-segment elevation="10">
 

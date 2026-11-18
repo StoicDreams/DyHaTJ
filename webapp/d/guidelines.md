@@ -1,4 +1,4 @@
-<webui-data data-page-title="Community Guidelines" data-page-subtitle="How we keep this a place people can trust"></webui-data>
+<webui-data data-page-title="Community Guidelines" data-page-subtitle="How we keep this a place people can trust" data-page-description="The rules for jobs, tips, comments, and profiles on {APP_NAME}: share real open jobs, keep it fair, protect privacy, and what gets posts removed."></webui-data>
 
 <webui-page-segment elevation="10">
 

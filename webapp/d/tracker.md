@@ -1,4 +1,4 @@
-<webui-data data-page-title="Application Tracker" data-page-subtitle="Keep every application in one place"></webui-data>
+<webui-data data-page-title="Application Tracker" data-page-subtitle="Keep every application in one place" data-page-description="Save jobs from anywhere on the site, then track each application's status, keep notes, and set follow-up dates. Your tracker is private."></webui-data>
 
 <webui-page-segment elevation="10">
 

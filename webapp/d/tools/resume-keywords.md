@@ -1,4 +1,4 @@
-<webui-data data-page-title="Resume Keyword Matcher" data-page-subtitle="See which of a job's key words your resume is missing"></webui-data>
+<webui-data data-page-title="Resume Keyword Matcher" data-page-subtitle="See which of a job's key words your resume is missing" data-page-description="Paste a job description and your resume to see which key words from the posting your resume uses and which it is missing. Runs in your browser."></webui-data>
 
 <webui-page-segment elevation="10">
 

@@ -1,4 +1,4 @@
-<webui-data data-page-title="For Employers" data-page-subtitle="Reach people who are looking right now"></webui-data>
+<webui-data data-page-title="For Employers" data-page-subtitle="Reach people who are looking right now" data-page-description="Post a sponsored job listing that shows first in matching searches. See what each listing needs, including pay range, apply link, and our rules."></webui-data>
 
 <webui-page-segment elevation="10">
 

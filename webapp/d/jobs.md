@@ -1,4 +1,4 @@
-<webui-data data-page-title="Shared Jobs" data-page-subtitle="Jobs people heard about and passed along"></webui-data>
+<webui-data data-page-title="Shared Jobs" data-page-subtitle="Jobs people heard about and passed along" data-page-description="Browse jobs people heard about and passed along, mark the helpful ones, ask questions in the comments, and save the ones you want to apply for."></webui-data>
 
 <webui-page-segment elevation="10">
 

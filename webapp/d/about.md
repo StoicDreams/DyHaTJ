@@ -1,4 +1,4 @@
-<webui-data data-page-title="About {APP_NAME}" data-page-subtitle=""></webui-data>
+<webui-data data-page-title="About {APP_NAME}" data-page-subtitle="" data-page-description="Why {APP_NAME} exists and who it serves: new graduates, experienced professionals, and career changers, with help on resumes, interviews, and the job market."></webui-data>
 
 ## Our Mission: Empowering Your Career Journey
 

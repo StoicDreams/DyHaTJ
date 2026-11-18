@@ -1,3 +1,5 @@
+<webui-data data-page-title="{APP_NAME} Terms &amp; Conditions" data-page-description="The terms and conditions for using {APP_NAME}, including who can use it, what you share, moderation, and sponsored listings."></webui-data>
+
 <webui-content cache src="https://cdn.myfi.ws/d/terms.md"></webui-content>
 
 <webui-quote theme="info">

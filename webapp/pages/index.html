@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-XQXQG6TF3G"></script>
+	<script>
+		if (location.hostname !== 'localhost') {
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			gtag('js', new Date());
+			gtag('config', 'G-XQXQG6TF3G');
+		}
+	</script>
+	<title>Did you hear about this job?</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="index, follow">
+	<base href="/" />
+	<script type="text/javascript">
+		navigator.serviceWorker.register('service-worker.min.js');
+	</script>
+
+	<link rel="dns-prefetch" href="https://cdn.myfi.ws" />
+	<link rel="dns-prefetch" href="https://api.myfi.ws" />
+	<link rel="preconnect" href="https://cdn.myfi.ws">
+	<link rel="preconnect" href="https://api.myfi.ws">
+
+	<link href="Logo.svg?v=91c3d5171b" rel="icon" type="image/svg+xml" sizes="any" />
+	<link rel="manifest" href="app.webmanifest?v=ecc679dea5">
+
+	<script>
+		// Web UI loads from the local MyFiCDN server (MyFiCDN/PowerShell/RunLocal.ps1) when the site runs on localhost,
+		// so framework changes show before they are published, and from cdn.myfi.ws everywhere else.
+		window.webuiCdn = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname) ? 'http://localhost:3180/' : 'https://cdn.myfi.ws/';
+		document.write('<link href="' + webuiCdn + 'css/webui.min.css" rel="stylesheet" />');
+	</script>
+	<link href="css/app.min.css?v=27a2f2bdbb" rel="stylesheet" />
+	<script>document.write('<script src="' + webuiCdn + 'webui/loader.min.js"></' + 'script>');</script>
+
+	<!-- Prerendered pages from webapp_post_build prerender. Release builds copy them to the site root. -->
+
+	<!--Web Worker-->
+	<script type="module" src="main.js?v=cea15cbf4f"></script>
+	<!--End Web Worker-->
+
+	<meta name="theme-color" content="#FF2E46" />
+
+	<meta name="author" content="Erik Gassler">
+	<meta name="description" content="Search jobs, share ones you heard about, read tips from other job seekers, and track your applications. An early build with sample data.">
+
+	<meta property="og:image" content="https://www.didyouhearaboutthisjob.com/Logo.svg">
+	<meta property="og:title" content="Job search resources and tips">
+	<meta property="og:url" content="https://www.didyouhearaboutthisjob.com/">
+	<meta property="og:description" content="Search jobs, share ones you heard about, read tips from other job seekers, and track your applications. An early build with sample data.">
+
+	<meta name="twitter:title" content="Job search resources and tips">
+	<meta name="twitter:url" content="https://www.didyouhearaboutthisjob.com/">
+	<meta name="twitter:site" content="@stoicdreamsllc">
+	<meta name="twitter:description" content="Search jobs, share ones you heard about, read tips from other job seekers, and track your applications. An early build with sample data.">
+	<meta name="twitter:image" content="https://www.didyouhearaboutthisjob.com/Logo.svg">
+	<link rel="modulepreload" href="https://cdn.myfi.ws/js/mdparse.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="/wc/join.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="/wc/post-card.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="/wc/post-list.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="/wc/report.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="/wc/search.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="/wc/store.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/alert.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/alerts.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/app.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/app-config.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/button.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/data.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/drawer.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/dropdown.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/feedback.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/flex.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/icon.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/input-message.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/input-text.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/link.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/myfi-info.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/nav.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/next-page.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/page-footer.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/page-segment.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/paper.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/quote.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/stoic-dreams-logo.min.js" crossorigin="anonymous" />
+	<link rel="preload" as="script" href="https://cdn.myfi.ws/webui/stoic-social-links.min.js" crossorigin="anonymous" />
+	<meta name="webui-prerender" content="85e180b5da">
+</head>
+
+<body>
+	<webui-app-config src="appConfig.json"></webui-app-config>
+	<webui-app data-removeclass=".nav|open;.shared|open">
+		<div data-prerendered>
+<p>Greetings, and welcome to this early build of Did You Hear About This Job: This website is currently in early development. We are currently preparing and adding content as well as developing features and services for you to start using soon.</p>
+<p>Job search, shared jobs, tips, comments, the application tracker, and sponsored listings are working previews. The jobs, tips, and people you see in them are sample data, and anything you add is saved only in this browser. The articles, tutorials, and training described below are not published yet.</p>
+<p>Likewise, we may detail unreleased content that we later decide not to implement, in which case any details of that content will be removed from the website.</p>
+
+<h2>Did You Hear About This Job?</h2>
+
+<p>The best leads often come from someone who says "did you hear about this job?" Share the jobs you hear about, pass along what worked in your own search, and keep track of your applications.</p>
+
+<p>Share a job or tip
+Track applications
+Check resume keywords</p>
+
+
+<h3>Recently Shared Jobs</h3>
+<p>All shared jobs</p>
+<h3>Most Helpful Tips</h3>
+<p>All tips</p>
+<h2>Welcome to Your Job Search Journey</h2>
+
+<p>Navigating the modern job market can feel overwhelming, whether you're a recent graduate taking your first steps, an experienced professional seeking new horizons, or someone ready for a complete career change. At Did You Hear About This Job, we understand the challenges you face - from crafting the perfect resume to acing that crucial interview. Our mission is to empower you with the knowledge, tools, and confidence to not just find a job, but to build a fulfilling career.</p>
+
+<h2>What We Offer: Comprehensive Resources for Every Stage</h2>
+
+<p>We provide a wealth of expertly crafted content designed to support you at every turn of your job search and professional development:</p>
+<ul>
+<li><strong>Insightful Blogs:</strong> Stay updated with the latest industry trends, market insights, and career advice.</li>
+<li><strong>Practical Tutorials:</strong> Step-by-step guides on essential job search tasks, from optimizing your resume for Applicant Tracking Systems (ATS) to mastering interview techniques.</li>
+<li><strong>Targeted Training:</strong> Develop critical soft skills like effective communication, emotional intelligence, and time management, crucial for long-term career success.</li>
+<li><strong>Actionable Tips:</strong> Quick, actionable advice on overcoming common challenges like interview nerves, standing out in a competitive market, and negotiating your salary.</li>
+</ul>
+
+<h2>Your Challenges, Our Solutions</h2>
+
+<p>We know the job search can be a "stressful and uncertain process". Many job seekers grapple with a "lack of experience," intense "competition," and the struggle to gain "insight of markets" or understand "change in skillset for same role". You might even be wondering "What job should I have?" or "How do I quit a job?".</p>
+<p>Did You Hear About This Job is built to address these specific pain points:</p>
+<ul>
+<li><strong>Overcome Experience Gaps:</strong> Discover strategies for gaining relevant experience through internships, volunteer work, and online certifications.</li>
+<li><strong>Stand Out from the Crowd:</strong> Learn how to tailor your resume and cover letter, identify your unique selling proposition, and build a strong personal brand.</li>
+<li><strong>Master the Interview:</strong> Prepare for common questions, conquer interview nerves, and use techniques like the STAR Method to articulate your skills effectively.</li>
+<li><strong>Navigate Career Transitions:</strong> Whether you're a recent graduate, an experienced professional, or looking for a complete career change, we have tailored advice to guide your journey.</li>
+<li><strong>Understand the Market:</strong> Get insights into evolving skill demands and how to assess your market worth for salary negotiations.</li>
+</ul>
+
+<h2>Explore Our Key Content Areas</h2>
+
+<p>Dive into our extensive library of resources, categorized to help you find exactly what you need:</p>
+
+<h3>The Job Search Journey</h3>
+
+<p>From planning your time and identifying occupations to preparing your materials and networking effectively, we guide you through every step. Learn about researching potential employers and making professional connections.</p>
+
+<h3>Optimizing Your Application Materials</h3>
+
+<p>Craft resumes that are "ATS friendly" and packed with relevant keywords. Get tips on writing compelling cover letters and showcasing your quantifiable achievements.</p>
+
+<h3>Acing the Interview</h3>
+
+<p>Prepare for technical and behavioral questions, learn to articulate your value, and follow up professionally after your interview.</p>
+
+<h3>Professional Development &amp; Skill Building</h3>
+
+<p>Enhance your "Effective Communication Skills", develop "Emotional Intelligence", master "Time Management Techniques", and cultivate an "Adaptable Mindset" for long-term career growth.</p>
+
+<h3>Specialized Career Guidance</h3>
+
+<p>Find tailored advice for "Recent Graduates", "Experienced Professionals", and those "Changing Careers".</p>
+
+<h2>Ready to Take the Next Step?</h2>
+
+<p>Start exploring our guides, tutorials, and tips today. Your dream job is within reach, and Did You Hear About This Job is here to help you find it.</p>
+		</div>
+		<webui-drawer slot="left" class="nav elevation-20" docked="true" data-state="slot|docked" data-moveable data-dockable>
+			<webui-flex justify="center" slot="header">
+				<webui-stoic-dreams-logo title="Did You Hear About This Job Logo" text="DyHaT" text2="Job"></webui-stoic-dreams-logo>
+			</webui-flex>
+			<webui-nav routes="/nav.json" data-subscribe="app-nav-routes:setNavRoutes"></webui-nav>
+		</webui-drawer>
+		<webui-drawer slot="right" class="shared elevation-20" data-stopclick data-moveable data-state="slot">
+		</webui-drawer>
+		<header slot="header">
+			<button aria-label="open navigation menu" data-toggleclass=".nav|open" class="elevation-10 pa-1 mx-1">
+				<webui-icon icon="hamburger"></webui-icon>
+			</button>
+			<h1 data-subscribe="page-title:innerHTML">Did You Hear About This Job?</h1>
+			<h2 data-subscribe="page-subtitle:innerHTML">Your Ultimate Partner in Career Success</h2>
+			<webui-flex grow></webui-flex>
+			<webui-feedback title="Provide us your feedback" data-post="https://api.myfi.ws/feedback/new" data-json-name="message">
+				<p>You can also come <a href="https://discord.gg/5X4YSDFdHD">chat with us on the Stoic Dreams discord server.</a></p>
+			</webui-feedback>
+			<webui-alerts title="View your notifications" data-title="My Alerts" data-toggleclass=".shared|open"></webui-alerts>
+			<webui-myfi-info sign-in-label="Sign In">
+				<template slot="panel-content">
+					<webui-alert show variant="info">Coming Soon</webui-alert>
+				</template>
+			</webui-myfi-info>
+		</header>
+		<noscript>Javascript is required to view this site</noscript>
+		<webui-page-footer copyright="2017" company="Stoic Dreams">
+			<webui-next-page theme="tertiary" data-subscribe="page-next-page"></webui-next-page>
+			<webui-flex class="my-3" justify="center" wrap>
+				<webui-link href="/about" icon="circle_exclamation|backing|bordered">About Did You Hear About This Job</webui-link>
+				<webui-link href="/contact" icon="messages|fill|shade:tri">Contact Stoic Dreams</webui-link>
+				<webui-link href="/privacy" icon="shield_exclamation|backing|bordered">Privacy</webui-link>
+				<webui-link href="/terms" icon="handshake|fill|shade:tri">Terms & Conditions</webui-link>
+			</webui-flex>
+			<webui-stoic-social-links class="mb-2"></webui-stoic-social-links>
+		</webui-page-footer>
+	</webui-app>
+</body>
+
+</html>
